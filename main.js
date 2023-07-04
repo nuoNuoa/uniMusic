@@ -3,6 +3,7 @@ import App from './App'
 // #ifndef VUE3
 import Vue from 'vue'
 import './uni.promisify.adaptor'
+import store from '@/store/index.js'
 Vue.config.productionTip = false
 
 App.mpType = 'app'
@@ -16,7 +17,8 @@ Vue.prototype.$pubFuc = PubFuc
 Vue.prototype.$imgSuffix = '?imageView&thumbnail=369x0&quality=75&tostatic=0';
 
 const app = new Vue({
-  ...App
+  ...App,
+    store
 })
 app.$mount()
 // #endif

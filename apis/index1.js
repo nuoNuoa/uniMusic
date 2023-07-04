@@ -34,7 +34,7 @@ export function apiGetTopAlbum(data) {
 
 export function apiGetRelatedVideo(data) {
 	return uni.request({
-		url: baseUrl + '/comment/video',
+		url: baseUrl + '/top/mv',
 		method: 'GET',
 		data,
 		hideLoading: true

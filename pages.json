@@ -14,7 +14,13 @@
 			"path": "pages/video/index",
 			"style": {
 				"navigationBarTitleText": "视频",
-				"navigationBarBackgroundColor": "#ee2323"
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": false,
+					"bounce": "none", // 取消iOS回弹,避免和下拉刷新冲突
+					"disableScroll": true, // Android小程序卡顿 
+					"softinputNavBar": "none"
+				}
 			}
 		},
 		{
