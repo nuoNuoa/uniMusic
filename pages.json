@@ -1,12 +1,26 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+
+			"path": "pages/account/ad",
+			"style": {
+				"navigationBarTitleText": "广告页",
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "发现",
-				"navigationBarBackgroundColor": "#ee2323",
+				"navigationStyle": "custom",
 				"app-plus": {
-					"titleNView": false
+					"titleNView": false,
+					"bounce": "none", // 取消iOS回弹,避免和下拉刷新冲突
+					"disableScroll": true, // Android小程序卡顿 
+					"softinputNavBar": "none"
 				}
 			}
 		},
@@ -27,22 +41,85 @@
 			"path": "pages/mine/index",
 			"style": {
 				"navigationBarTitleText": "我的",
-				"navigationBarBackgroundColor": "#ee2323"
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": false
+				}
 			}
 		},
 		{
 			"path": "pages/cloud/index",
 			"style": {
 				"navigationBarTitleText": "云村",
-				"navigationBarBackgroundColor": "#ee2323"
+				"app-plus": {
+					"titleNView": false,
+					"bounce": "none", // 取消iOS回弹,避免和下拉刷新冲突
+					"disableScroll": true // Android小程序卡顿 
+				}
 			}
 		},
 		{
 			"path": "pages/account/index",
 			"style": {
 				"navigationBarTitleText": "账号",
-				"navigationBarBackgroundColor": "#ee2323"
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": false
+				}
 			}
+		}
+	],
+	"subPackages": [{
+			"root": "pages/subpages/index",
+			"pages": [{
+				"path": "album",
+				"style": {
+					"navigationBarTitleText": "歌单",
+					"navigationStyle": "custom",
+					"app-plus": {
+						"titleNView": false
+					}
+				}
+			}, {
+				"path": "searchList",
+				"style": {
+					"navigationBarTitleText": "搜索结果",
+					"navigationStyle": "custom",
+					"app-plus": {
+						"titleNView": false
+					}
+				}
+			}, {
+				"path": "rank",
+				"style": {
+					"navigationBarTitleText": "排行榜",
+					"navigationStyle": "custom",
+					"app-plus": {
+						"titleNView": false
+					}
+				}
+			}, {
+				"path": "play",
+				"style": {
+					"navigationBarTitleText": "播放",
+					"navigationStyle": "custom",
+					"app-plus": {
+						"titleNView": false
+					}
+				}
+			}]
+		},
+		{
+			"root": "pages/subpages/account",
+			"pages": [{
+				"path": "login",
+				"style": {
+					"navigationBarTitleText": "登录",
+					"app-plus": {
+						"titleNView": false
+					}
+				}
+			}]
 		}
 	],
 	"tabBar": {
@@ -83,10 +160,9 @@
 		]
 	},
 	"globalStyle": {
-		"navigationBarTextStyle": "white",
-		"navigationBarTitleText": "Uniapp Music",
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "网易云音乐",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
-	},
-	"uniIdRouter": {}
+	}
 }
